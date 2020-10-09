@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import time
 import re
-import tensorflow as tf
-from tensorflow import keras
 import numpy as np
 
 st.image('https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/NTU%20Logo.png', width = 750)
@@ -35,23 +33,6 @@ def load_data():
 with st.spinner('Wait for 1000 rows to be loaded into memory...'):
     df = load_data()
 # st.success('Done!')
-
-class MyCallback(keras.callbacks.Callback):
-  def on_predict_begin(self, logs=None):
-    # keys = list(logs.keys())
-    # print("Start predicting; got log keys: {}".format(keys))
-    st.header('Percentage Complete')
-    self._progress = st.empty()
-    self._progress.progress(0)
-
-  def on_predict_end(self, logs=None):
-    # keys = list(logs.keys())
-    # print("Stop predicting; got log keys: {}".format(keys))
-    if batch % 100 == 99:
-        self._summary_chart.add_rows(rows)
-    batch_percent = logs['batch'] * logs['size'] / self.params['samples']
-    percent = self._epoch / self._num_epochs + (batch_percent / self._num_epochs)
-    self._progress.progress(math.ceil(percent * 100))
 
 if use_case == "Exploratory Data Analysis":
     st.write("<h2 align=center>Attila Cybertech - EDA</h2>", unsafe_allow_html=True)
