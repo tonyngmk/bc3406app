@@ -15,7 +15,7 @@ use_case = st.sidebar.selectbox("Select use cases",
 ("Exploratory Data Analysis",
 "Detecting anomaly (encoder)",
 "Predicting Single-Step (30 seconds)",
-"Predicting Multi-Step (30 minutes)" 
+"Predicting Multi-Step (60 minutes)" 
 ))
 
 # unsupervised_models = st.sidebar.selectbox("Select unsupervised model", 
@@ -221,7 +221,7 @@ elif use_case == "Predicting Single-Step (30 seconds)":
       if singleStepModel == "Linear":
         "#### Linear Diagram"
         # st.image("https://www.tensorflow.org/tutorials/structured_data/images/wide_window.png", width = 500)
-        st.image("https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleLinearDiagram.png", width = 415)
+        st.image("https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleDenseDiagram.png", width = 415)
         '''*Using cached images as actual prediction takes a long time while running on CPU.*'''
         "#### Model architecture"
         st.image("https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleLinearPressure1Model.png", width = 400)
@@ -343,7 +343,7 @@ elif use_case == "Predicting Single-Step (30 seconds)":
       if singleStepModel == "Linear":
         "#### Linear Diagram"
         # st.image("https://www.tensorflow.org/tutorials/structured_data/images/wide_window.png", width = 500)
-        st.image("https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleLinearDiagram.png", width = 415)
+        st.image("https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleDenseDiagram.png", width = 415)
         '''*Using cached images as actual prediction takes a long time while running on CPU.*'''
         # st.subheader("Model architecture")
         "#### Model architecture"
@@ -458,8 +458,8 @@ elif use_case == "Predicting Single-Step (30 seconds)":
         st.subheader("Conclusion")
         "**LSTM** is the superior model for single-step prediction for `Pressure 2`."         
          
-elif use_case == "Predicting Multi-Step (30 minutes)":
-    st.write("<h2 align=center>Attila Cybertech - Predicting Multi-Step (30 minutes)</h2>", unsafe_allow_html=True)
+elif use_case == "Predicting Multi-Step (60 minutes)":
+    st.write("<h2 align=center>Attila Cybertech - Predicting Multi-Step (60 minutes)</h2>", unsafe_allow_html=True)
     targetVariable = st.sidebar.selectbox("Select target variable", 
     ("Pressure 1", "Pressure 2"))
 
