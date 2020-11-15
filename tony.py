@@ -271,7 +271,7 @@ elif use_case == "Predicting Single-Step (30 seconds)":
         df
         "#### Training and Validation loss"
         st.image('https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleConvPressure1Loss.png', width = 750)
-
+    
         "#### Input & Predictions plot"
         st.image('https://raw.githubusercontent.com/tonyngmk/free_storage/master/Images/streamlit/Atilla/singleConvPressure1.png', width = 750)
 
